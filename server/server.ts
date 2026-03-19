@@ -18,7 +18,7 @@ const pool = mysql.createPool({
   user: process.env.TIDB_USER,
   password: process.env.TIDB_PASSWORD,
   database: process.env.TIDB_DATABASE,
-  ssl: (process.env.TIDB_SSL_CA || process.env.TIDB_HOST?.includes(".tidbcloud.com")) ? {
+  ssl: (process.env.TIDB_HOST?.includes(".tidbcloud.com")) ? {
     rejectUnauthorized: false
   } : undefined,
   waitForConnections: true,
