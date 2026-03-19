@@ -3,6 +3,7 @@ import mysql from "mysql2/promise";
 import dotenv from "dotenv";
 
 dotenv.config();
+console.log("Vercel API Starting (Self-Contained Version)...");
 
 // Initialize TiDB Connection Pool
 const pool = mysql.createPool({
